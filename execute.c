@@ -18,17 +18,10 @@ void execute(char **args)
 		return;
 	}
 	path = tokenize_path(get_path());
-	if (path == NULL) {
-        perror("Error tokenizing path");
-        return;
-    }
 	while (path[i] != NULL)
 	{
-		char buffer[1024];
+		char *buffer = construct_buffer(path[i], args[0]);
 
-		strcpy(buffer, path[i]);
-		strcat(buffer, "/");
-		strcat(buffer, args[0]);
 		if (stat(buffer, &st) == 0)
 		{
 			pid = fork();
