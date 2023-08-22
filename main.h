@@ -14,4 +14,5 @@ void execute(char **args);
 void print_env(void);
 char *get_path();
 char **tokenize_path(char *p);
+char *construct_buffer(char *path, char *args);
 #endif
