@@ -30,5 +30,10 @@ char **tokenize(char *line)
 		token = strtok(NULL, " \n\t\r\a");
 	}
 	tokens[i] = NULL;
+	for (j = 0; j < i; j++)
+	{
+    	free(tokens[j]);
+	}
+	free(tokens);
 	return (tokens);
 }

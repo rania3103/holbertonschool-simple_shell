@@ -20,11 +20,12 @@ char *readline()
 	if (r == EOF)
 	{
 		free(line);
-		exit(0);
+		return (NULL);
 	}
 	if (line[r - 1] == '\n')
 	{
 		line[r - 1] = '\0';
 	}
+	free(line);
 	return (line);
 }

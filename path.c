@@ -73,5 +73,10 @@ char **tokenize_path(char *p)
 		i++;
 	}
 	buffer[i] = NULL;
+	for (int j = 0; j < i; j++)
+	{
+    	free(buffer[j]);
+	}
+	free(buffer);
 	return (buffer);
 }
