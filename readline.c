@@ -5,8 +5,8 @@
 */
 char *readline()
 {
-	char *line;
-	size_t size;
+	char *line = NULL;
+	size_t size = 0;
 	int r;
 
 	r = getline(&line, &size, stdin);
@@ -17,11 +17,14 @@ char *readline()
 		free(line);
 		exit(1);
 	}
-
 	if (r == EOF)
 	{
 		free(line);
 		exit(0);
+	}
+	if (line[r - 1] == '\n')
+	{
+		line[r - 1] = '\0';
 	}
 	return (line);
 }
