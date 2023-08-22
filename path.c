@@ -56,6 +56,7 @@ char **tokenize_path(char *p)
 	char **buffer;
 	int i = 0;
 	char *token;
+	int j;
 
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
@@ -73,7 +74,7 @@ char **tokenize_path(char *p)
 		i++;
 	}
 	buffer[i] = NULL;
-	for (int j = 0; j < i; j++)
+	for (j = 0; j < i; j++)
 	{
     	free(buffer[j]);
 	}

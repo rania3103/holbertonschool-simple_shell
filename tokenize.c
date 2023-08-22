@@ -8,7 +8,7 @@ char **tokenize(char *line)
 {
 	char **tokens;
 	char *token;
-	int i;
+	int i, j;
 
 	i = 0;
 	tokens = (char **)malloc(sizeof(char *) * 1024);
