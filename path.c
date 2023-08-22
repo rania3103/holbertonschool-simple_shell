@@ -1,5 +1,20 @@
 #include "main.h"
 /**
+ * construct_buffer - Construct the buffer path.
+ * @path: Path to the command
+ * @args: Command arguments
+ *Return: Buffer containing the full path to the command
+ */
+char *construct_buffer(char *path, char *args)
+{
+	char buffer[1024];
+
+	strcpy(buffer, path);
+	strcat(buffer, "/");
+	strcat(buffer, args);
+	return (strdup(buffer));
+}
+/**
  * print_env - print the enviroment
  * Return: pointer to the enviroment
 */
@@ -58,11 +73,5 @@ char **tokenize_path(char *p)
 		i++;
 	}
 	buffer[i] = NULL;
-	/*for (int j = 0; j < i; j++)
-	{
-    	free(buffer[j]);
-	}
-	free(buffer);*/
 	return (buffer);
-	
 }
