@@ -7,22 +7,25 @@
  */
 char *construct_buffer(char *path, char *args)
 {
-	char buffer[1024];
+	int path_len = strlen(path);
+	int args_len = strlen(args);
+	char *buffer = malloc(path_len + 1 + args_len + 1);
 
-	strcpy(buffer, path);
-	strcat(buffer, "/");
-	strcat(buffer, args);
-	return (strdup(buffer));
+	if (buffer == NULL)
+	{
+		perror("error in buffer malloc for path");
+		exit(EXIT_FAILURE);
+	}
+	sprintf(buffer, "%s%s", path, args);
+	return (buffer);
 }
 /**
  * print_env - print the enviroment
- * Return: pointer to the enviroment
 */
 void print_env(void)
 {
-	char **enviroment;
+	char **enviroment = environ;
 
-	enviroment = environ;
 	while (*enviroment != NULL)
 	{
 		printf("%s\n", *enviroment);
@@ -41,7 +44,7 @@ char *get_path()
 	if (p == NULL)
 	{
 		perror(" enviroment not found");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 	return (p);
 }
@@ -56,28 +59,22 @@ char **tokenize_path(char *p)
 	char **buffer;
 	int i = 0;
 	char *token;
-	int j;
 
 	buffer = malloc(sizeof(char) * 1024);
 	if (buffer == NULL)
 	{
 		perror("error in memory allocation");
-		free(buffer);
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
-
 	token = strtok(p, ":");
+	if (token == NULL)
+		return (NULL);
 	while (token != NULL)
 	{
-		buffer[i] = strdup(token);
+		buffer[i] = token;
 		token = strtok(NULL, ":");
 		i++;
 	}
 	buffer[i] = NULL;
-	for (j = 0; j < i; j++)
-	{
-    	free(buffer[j]);
-	}
-	free(buffer);
 	return (buffer);
 }
