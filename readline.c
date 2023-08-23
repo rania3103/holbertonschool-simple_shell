@@ -6,26 +6,20 @@
 char *readline()
 {
 	char *line = NULL;
-	size_t size = 0;
+	size_t sizebuf = 0;
 	int r;
 
-	r = getline(&line, &size, stdin);
-
+	r = getline(&line, &sizebuf, stdin);
 	if (r == -1)
 	{
-		perror("error reading line");
-		free(line);
-		exit(1);
+		if (feof(stdin))
+			exit(EXIT_SUCCESS);
+
+		else
+		{
+			perror("error in readling line");
+			exit(EXIT_FAILURE);
+		}
 	}
-	if (r == EOF)
-	{
-		free(line);
-		return (NULL);
-	}
-	if (line[r - 1] == '\n')
-	{
-		line[r - 1] = '\0';
-	}
-	free(line);
 	return (line);
 }
