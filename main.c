@@ -1,19 +1,23 @@
 #include "main.h"
 /**
  * main - entry point
- * Return: 0
+ * Return: 0 
 */
 int main(void)
 {
 	char *line_input;
 	char **args;
+	int ex;
 
 	while (1)
 	{
-		printf("simpleshell$");
+		if (isatty(STDIN_FILENO))
+			printf("simpleshell$");
+
 		line_input = readline();
 		args = tokenize(line_input);
-		execute(args);
+		ex = execute(args);
+
 		free(line_input);
 		free(args);
 	}
