@@ -7,7 +7,6 @@ int main(void)
 {
 	char *line_input;
 	char **args;
-	int ex;
 
 	while (1)
 	{
@@ -16,8 +15,13 @@ int main(void)
 
 		line_input = readline();
 		args = tokenize(line_input);
-		ex = execute(args);
-
+		if (strcmp(args[0], "exit") == 0)
+		{
+			free(line_input);
+			free(args);
+			break;
+		}
+		execute(args);
 		free(line_input);
 		free(args);
 	}
