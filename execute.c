@@ -1,47 +1,49 @@
 #include "main.h"
 /**
- * execute - execute a line
+ * execute - execute a command
  * @args: arguments
+ * Return: 1
 */
-void execute(char **args)
+int execute(char **args)
 {
-	pid_t pid;
 	char **path;
+	int i, status;
 	struct stat st;
-	int i = 0;
 
 	if (strcmp(args[0], "exit") == 0)
-		exit(0);
+		exit(EXIT_SUCCESS);
 	if (strcmp(args[0], "env") == 0)
-	{
 		print_env();
-		return;
+	path = tokenize_path(getenv("PATH"));
+	if (path == NULL)
+	{
+		perror("failed to retrieve path");
+		exit(EXIT_FAILURE);
 	}
-	path = tokenize_path(get_path());
-	while (path[i] != NULL)
+	for (i = 0; path[i] != NULL; i++)
 	{
 		char *buffer = construct_buffer(path[i], args[0]);
 
 		if (stat(buffer, &st) == 0)
 		{
-			pid = fork();
+			pid_t pid = fork();
+
 			if (pid == -1)
-				perror("error in fork");
+				perror("Error in fork");
 			else if (pid == 0)
 			{
-				if (execve(buffer, args, NULL) == -1)
-				{
+				if (execve(buffer, args, environ) == -1)
 					perror("Error in execve");
-					exit(1);
-				}
+				exit(EXIT_FAILURE);
 			}
 			else
 			{
-				wait(NULL);
-				break;
+				do {
+					waitpid(pid, &status, WUNTRACED);
+				} while (!WIFEXISTED(status) && !WIFSIGNALED(status));
 			}
 		}
-		i++;
 	}
-	free(path);
+	perror("command not found");
+	return (1);
 }
