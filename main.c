@@ -19,12 +19,19 @@ int main(void)
 		{
 			if (feof(stdin))
 			{
+				printf("\n");
 				exit(EXIT_SUCCESS);
 			}
 			break;
 		}
 		if (strcmp(line_input, "exit\n") == 0)
 		{
+			free(line_input);
+			exit(EXIT_SUCCESS);
+		}
+		if (strcmp(line_input, "env\n") == 0)
+		{
+			print_env();
 			free(line_input);
 			exit(EXIT_SUCCESS);
 		}
