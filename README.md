@@ -72,6 +72,9 @@ simpleshell$ env
 PATH=/usr/local/bin:/usr/bin:/bin
 HOME=/home/user
 
+simpleshell$ echo "Hello, World!"
+Hello, World!
+
 simpleshell$ exit
 $
 ```
