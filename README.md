@@ -21,7 +21,7 @@ Our shell will be so basic that there will be no configuration files and no shut
 
 ## Prototype 🤖
 
-```http
+```http #0a192f
 int main(void);
 ```
 
