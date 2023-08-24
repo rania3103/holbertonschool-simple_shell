@@ -30,6 +30,13 @@ int main(void);
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
+### [Prerequisites](https://via.placeholder.com/10/00b48a?text=+)
+
+Before you can run `simpleshell`, make sure you have the following:
+
+- A Unix-like operating system (Linux, macOS, etc.)
+- GCC (GNU Compiler Collection) installed for compilation.
+
 ## [Testing](https://via.placeholder.com/10/00b48a?text=+) 🔎
 
 Our shell work like this in interactive mode:
