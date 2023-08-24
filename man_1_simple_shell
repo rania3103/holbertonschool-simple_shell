@@ -1,60 +1,32 @@
-.TH SIMPLYSHELL 1 "August 2023" "Simple Shell Manual"
+# NAME
 
-.SH NAME
-simpleshell \- A simple interactive shell
+simpleshell - A simple shell program
 
-.SH SYNOPSIS
-.B simpleshell
+# SYNOPSIS
 
-.SH DESCRIPTION
-.B simpleshell
-is a simple interactive shell program that allows you to execute commands.
+**simpleshell**
 
-.SH OPTIONS
-This shell does not support any command-line options.
+# DESCRIPTION
 
-.SH COMMANDS
-.TP
-.B exit
-Exit the shell.
+`simpleshell` is a basic Unix shell program that allows users to execute commands and display the environment variables.
 
-.TP
-.B env
-Display the current environment variables.
+# USAGE
 
-.SH USAGE
-To start the shell, simply run the
-.B simpleshell
-command. You will be presented with a prompt where you can enter commands.
+To use `simpleshell`, simply run the program. You will be presented with a command prompt where you can enter commands.
 
-.B simpleshell
-supports the following built-in commands:
+- To execute a command, type it and press Enter.
+- To exit the shell, type "exit" and press Enter.
+- To display environment variables, type "env" and press Enter.
 
-.B simpleshell
-also supports executing external commands. Simply enter the command at the prompt.
+# EXAMPLES
 
-.SH EXAMPLES
-To list files in the current directory, enter:
-.PP
-.B simpleshell$ ls
+$ simpleshell
+simpleshell$ ls
+file1.txt file2.txt
 
-To print working directory, enter:
-.PP
-.B simpleshell$ pwd
+simpleshell$ env
+PATH=/usr/local/bin:/usr/bin:/bin
+HOME=/home/user
 
-To create directory, enter:
-.PP
-.B simpleshell$ mkdir dir_name
-
-To remove directory, enter:
-.PP
-.B simpleshell$ rmdir dir_name
-
-.SH FILES
-.TP
-.B /path/to/simpleshell
-The path to the simpleshell executable.
-
-.SH SEE ALSO
-List other related programs or documentation.
-
+simpleshell$ exit
+$
