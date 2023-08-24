@@ -39,6 +39,8 @@ int execute(char *line_input)
 	else
 	{
 		wait(&status);
+		free(path);
+		free(args);
 		if (WIFEXITED(status))
 			status = WEXITSTATUS(status);
 	}
