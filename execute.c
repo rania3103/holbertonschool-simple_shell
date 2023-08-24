@@ -7,13 +7,16 @@
 int execute(char *line_input)
 {
 	char **args;
-	char *path;
+	char *path = NULL;
 	pid_t pid;
 	int status, exit_stat = 0;
 
 	args = tokenize(line_input);
 	if (args == NULL)
+	{
+		free(args);
 		return (-1);
+	}
 	if (line_input[0] == '/')
 		path = strdup(line_input);
 	else
@@ -21,6 +24,7 @@ int execute(char *line_input)
 	if (path == NULL)
 	{
 		free(args);
+		free(path);
 		return (-1);
 	}
 	pid = fork();
@@ -40,5 +44,7 @@ int execute(char *line_input)
 		if (WIFEXITED(status))
 			status = WEXITSTATUS(status);
 	}
+	free(path);
+	free(args);
 	return (exit_stat);
 }

@@ -20,6 +20,7 @@ int main(void)
 			if (feof(stdin))
 			{
 				printf("\n");
+				free(line_input);
 				exit(EXIT_SUCCESS);
 			}
 			break;

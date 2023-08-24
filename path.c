@@ -25,7 +25,6 @@ char **tokenize_path(char *p)
 		i++;
 	}
 	buffer[i] = NULL;
-
 	return (buffer);
 }
 /**
@@ -35,11 +34,10 @@ char **tokenize_path(char *p)
 */
 char *get_path(char *cmd)
 {
-	char *envp, *copenvp, *res;
+	char *envp, *copenvp, *res = NULL;
 	char path[1024];
 	char *token;
 	struct stat st;
-
 
 	envp = getenv("PATH");
 	if (envp == NULL)
