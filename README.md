@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="https://github.com/rania3103/holbertonschool-simple_shell/blob/main/output.gif" width="50%">
+  <img src="https://github.com/rania3103/holbertonschool-simple_shell/blob/main/output.gif" width="100%">
 </div>
 
 # [Simple Shell](https://via.placeholder.com/10/00b48a?text=+)🐚
