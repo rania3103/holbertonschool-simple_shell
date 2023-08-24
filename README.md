@@ -1,6 +1,4 @@
 
-<video src="gif.mp4">
-
 # Simple Shell 🐚
 
 The shell is like a program that receives command inputs from the user’s keyboard and sends them to a machine to be executed by the kernel.
