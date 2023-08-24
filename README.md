@@ -19,18 +19,18 @@ These stages are general and they may be applicable to a wide range of programs,
 
 Our shell will be so basic that there will be no configuration files and no shutdown command.
 
-## Prototype 🤖
+## [Prototype](https://via.placeholder.com/10/00b48a?text=+) 🤖
 
 ```c
 int main(void);
 ```
 
-## Compilation 💻
+## [Compilation](https://via.placeholder.com/10/00b48a?text=+)💻
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
-## Testing 🔎
+## [Testing](https://via.placeholder.com/10/00b48a?text=+) 🔎
 
 Our shell work like this in interactive mode:
 
@@ -58,7 +58,7 @@ hsh main.c shell.c test_ls_2
 $
 ```
 
-## Usage/Examples 🖊
+## [Usage/Examples](https://via.placeholder.com/10/00b48a?text=+) 🖊
 
 ```bash
 SimpleShell$ ls
@@ -73,11 +73,11 @@ SimpleShell$
 
 ```
 
-## Flowchart 📉
+## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 📉
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-## Our files 📁
+## [Our files](https://via.placeholder.com/10/00b48a?text=+) 📁
 
 ```
 - main.h: header file
@@ -88,7 +88,7 @@ SimpleShell$
 
 ```
 
-## Functions we used 📲
+## [Functions we used](https://via.placeholder.com/10/00b48a?text=+) 📲
 
 ```
 - strcmp
@@ -110,7 +110,7 @@ SimpleShell$
 
 ```
 
-## Conclusion 💎
+## [Conclusion](https://via.placeholder.com/10/00b48a?text=+) 💎
 
 Building a simple shell in C involves understanding how to parse and execute commands, handle user input and output, and manage processes using system calls like fork and execvp.
 
