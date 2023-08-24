@@ -6,7 +6,6 @@
 int main(void)
 {
 	char *line_input = NULL;
-	char **tokens;
 	int ex, r;
 	size_t bufsize = 0;
 
