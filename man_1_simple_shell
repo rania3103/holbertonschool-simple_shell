@@ -1,0 +1,60 @@
+.TH SIMPLYSHELL 1 "August 2023" "Simple Shell Manual"
+
+.SH NAME
+simpleshell \- A simple interactive shell
+
+.SH SYNOPSIS
+.B simpleshell
+
+.SH DESCRIPTION
+.B simpleshell
+is a simple interactive shell program that allows you to execute commands.
+
+.SH OPTIONS
+This shell does not support any command-line options.
+
+.SH COMMANDS
+.TP
+.B exit
+Exit the shell.
+
+.TP
+.B env
+Display the current environment variables.
+
+.SH USAGE
+To start the shell, simply run the
+.B simpleshell
+command. You will be presented with a prompt where you can enter commands.
+
+.B simpleshell
+supports the following built-in commands:
+
+.B simpleshell
+also supports executing external commands. Simply enter the command at the prompt.
+
+.SH EXAMPLES
+To list files in the current directory, enter:
+.PP
+.B simpleshell$ ls
+
+To print working directory, enter:
+.PP
+.B simpleshell$ pwd
+
+To create directory, enter:
+.PP
+.B simpleshell$ mkdir dir_name
+
+To remove directory, enter:
+.PP
+.B simpleshell$ rmdir dir_name
+
+.SH FILES
+.TP
+.B /path/to/simpleshell
+The path to the simpleshell executable.
+
+.SH SEE ALSO
+List other related programs or documentation.
+
