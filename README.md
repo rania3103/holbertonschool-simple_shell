@@ -21,13 +21,13 @@ Our shell will be so basic that there will be no configuration files and no shut
 
 ## Prototype 🤖
 
-```
+```c
 int main(void);
 ```
 
 ## Compilation 💻
 
-```http
+```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
 ## Testing 🔎
