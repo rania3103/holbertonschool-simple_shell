@@ -112,6 +112,6 @@ SimpleShell$
 
 ## [Conclusion](https://via.placeholder.com/10/00b48a?text=+) 💎
 
-Building a simple shell in C involves understanding how to parse and execute commands, handle user input and output, and manage processes using system calls like fork and execvp.
+Building a simple shell in C involves understanding how to parse and execute commands, handle user input and output, and manage processes using system calls like fork and execve.
 
 The process of creating a shell requires a deep understanding of C programming language and the Unix operating system.
