@@ -5,25 +5,34 @@
 */
 int main(void)
 {
-	char *line_input;
-	char **args;
+	char *line_input = NULL;
+	char **tokens;
+	int ex, r;
+	size_t bufsize = 0;
 
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
 			printf("simpleshell$");
 
-		line_input = readline();
-		args = tokenize(line_input);
-		if (strcmp(args[0], "exit") == 0)
+		r = getline(&line_input, &bufsize, stdin);
+		if (r == -1)
 		{
-			free(line_input);
-			free(args);
+			if (feof(stdin))
+			{
+				exit(EXIT_SUCCESS);
+			}
 			break;
 		}
-		execute(args);
-		free(line_input);
-		free(args);
+		if (strcmp(line_input, "exit\n") == 0)
+		{
+			free(line_input);
+			exit(EXIT_SUCCESS);
+		}
+		ex = execute(line_input);
+		if (ex == -1)
+			perror("error in execution");
 	}
+	free(line_input);
 	return (0);
 }
