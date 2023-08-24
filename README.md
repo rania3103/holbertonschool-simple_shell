@@ -34,7 +34,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 
 Our shell work like this in interactive mode:
 
-```http
+```bash
 $ ./hsh
 ($) /bin/ls
 hsh main.c shell.c
@@ -44,7 +44,7 @@ $
 ```
 also in non-interactive mode:
 
-```http
+```bash
 $ echo "/bin/ls" | ./hsh
 hsh main.c shell.c test_ls_2
 $
@@ -60,7 +60,7 @@ $
 
 ## Usage/Examples 🖊
 
-```http
+```bash
 SimpleShell$ ls
 AUTHORS            execute.c          main.h             path.c             tokenize.c
 README.md          main.c             man_1_simple_shell readline.c
@@ -79,7 +79,7 @@ SimpleShell$
 
 ## Our files 📁
 
-```http
+```
 - main.h: header file
 - tokenize.c: tokenize input
 - execute.c: execute a command
@@ -90,7 +90,7 @@ SimpleShell$
 
 ## Functions we used 📲
 
-```http
+```
 - strcmp
 - execve
 - perror
