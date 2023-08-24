@@ -1,8 +1,3 @@
-# holbertonschool-simple_shell
-create my own simple shell
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 # Simple Shell 🐚
 
 The shell is like a program that receives command inputs from the user’s keyboard and sends them to a machine to be executed by the kernel.
