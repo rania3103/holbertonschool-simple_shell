@@ -1,4 +1,4 @@
-[![Demo Video](./gif.mp4)]
+![Demo Video](https://github.com/rania3103/holbertonschool-simple_shell/blob/main/gif.mp4)
 
 # Simple Shell 🐚
 
