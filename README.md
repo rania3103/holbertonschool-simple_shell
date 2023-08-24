@@ -64,7 +64,13 @@ $
 SimpleShell$ ls
 AUTHORS            execute.c          main.h             path.c             tokenize.c
 README.md          main.c             man_1_simple_shell readline.c
-SimpleShell$
+
+simpleshell$ env
+PATH=/usr/local/bin:/usr/bin:/bin
+HOME=/home/user
+
+simpleshell$ exit
+$
 ```
 
 ## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 📉
