@@ -1,3 +1,4 @@
+[![Demo Video](./gif.mp4)]
 
 # Simple Shell 🐚
 
