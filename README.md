@@ -1,4 +1,7 @@
-![Demo](https://github.com/rania3103/holbertonschool-simple_shell/blob/main/output.gif)
+
+<div align="center">
+  <img src="https://github.com/rania3103/holbertonschool-simple_shell/blob/main/output.gif" width="50%">
+</div>
 
 # Simple Shell 🐚
 
