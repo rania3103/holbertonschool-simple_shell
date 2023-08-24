@@ -65,12 +65,6 @@ SimpleShell$ ls
 AUTHORS            execute.c          main.h             path.c             tokenize.c
 README.md          main.c             man_1_simple_shell readline.c
 SimpleShell$
-
-
-
-
-
-
 ```
 
 ## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 📉
@@ -85,7 +79,6 @@ SimpleShell$
 - execute.c: execute a command
 - path.c: functions related to path
 - AUTHORS: contributors to the project
-
 ```
 
 ## [Functions we used](https://via.placeholder.com/10/00b48a?text=+) 📲
@@ -107,7 +100,6 @@ SimpleShell$
 - getenv
 - getline
 - isatty
-
 ```
 
 ## [Conclusion](https://via.placeholder.com/10/00b48a?text=+) 💎
