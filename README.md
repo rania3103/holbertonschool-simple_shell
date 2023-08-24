@@ -3,7 +3,7 @@
   <img src="https://github.com/rania3103/holbertonschool-simple_shell/blob/main/output.gif" width="50%">
 </div>
 
-# Simple Shell 🐚
+# [Simple Shell](https://via.placeholder.com/10/00b48a?text=+)🐚
 
 The shell is like a program that receives command inputs from the user’s keyboard and sends them to a machine to be executed by the kernel.
 
