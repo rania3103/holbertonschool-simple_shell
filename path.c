@@ -9,9 +9,9 @@
 
 char **tokenize_path(char *p)
 {
-	char **buffer;
+	char **buffer; /** Array of pointers to store path tokens */
 	int i = 0;
-	char *token;
+	char *token; /** Temporary token storage */
 
 	buffer = (char **) malloc(sizeof(char *) * 1024);
 	if (buffer == NULL)
@@ -26,7 +26,7 @@ char **tokenize_path(char *p)
 		token = strtok(NULL, ":");
 		i++;
 	}
-	buffer[i] = NULL;
+	buffer[i] = NULL; /** Marking the end of the buffer */
 	return (buffer);
 }
 
