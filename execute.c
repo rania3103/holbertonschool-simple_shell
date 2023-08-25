@@ -32,14 +32,14 @@ int execute(char *line_input)
 		return (-1);
 	}
 	else if (pid == 0)
-        exit_stat = execve(path, args, environ);
+		exit_stat = execve(path, args, environ);
 	else
 	{
 		wait(&status);
 		if (WIFEXITED(status))
 			status = WEXITSTATUS(status);
 	}
-    free_tokens(args);
-    free(path);
+	free_tokens(args);
+	free(path);
 	return (exit_stat);
 }
