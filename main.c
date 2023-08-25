@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * main - entry point
- * Return: 0
+ * main - Entry point
+ *
+ * Return: 0 (on success) or -1 (on error)
 */
 int main(void)
 {
