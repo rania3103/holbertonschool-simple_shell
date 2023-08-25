@@ -72,7 +72,7 @@ simpleshell$
 
 ```bash
 SimpleShell$ ls
-AUTHORS            execute.c          main.h             path.c             tokenize.c
+AUTHORS            execute.c          free_tokens.c		main.h             path.c             tokenize.c
 README.md          main.c             man_1_simple_shell
 
 simpleshell$ env
@@ -95,6 +95,7 @@ $
 ```
    - AUTHORS: contributors to the project
    - execute.c: execute a command
+   - free_tokens.c: frees the array of tokens
    - main.h: header file
    - path.c: functions related to path
    - tokenize.c: tokenize input
