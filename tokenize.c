@@ -8,7 +8,7 @@ char **tokenize(char *line)
 {
 	char **tokens = NULL;
 	char *token;
-	int i;
+	int i = 0;
 
 	tokens = (char **) malloc(sizeof(char *) * 1024);
 	if (tokens == NULL)
@@ -19,7 +19,7 @@ char **tokenize(char *line)
 	token = strtok(line, " \n\t");
 	while (token != NULL)
 	{
-		tokens[i] = token;
+		tokens[i] = strdup(token);
 		i++;
 		token = strtok(NULL, " \n\t");
 	}
