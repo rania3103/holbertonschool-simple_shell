@@ -72,8 +72,8 @@ simpleshell$
 
 ```bash
 SimpleShell$ ls
-AUTHORS            execute.c          free_tokens.c		main.h             path.c             tokenize.c
-README.md          main.c             man_1_simple_shell
+AUTHORS            execute.c          free_tokens.c		main.h             path.c
+README.md          main.c             man_1_simple_shell	tokenize.c
 
 simpleshell$ env
 PATH=/usr/local/bin:/usr/bin:/bin
