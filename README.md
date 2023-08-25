@@ -88,7 +88,7 @@ $
 
 ## [Flowchart](https://via.placeholder.com/10/00b48a?text=+) 📉
 
-![App Screenshot](./flowchart.png)
+![App Screenshot](./flowchart.jpg)
 
 ## [Our files](https://via.placeholder.com/10/00b48a?text=+) 📁
 
