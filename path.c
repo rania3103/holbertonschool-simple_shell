@@ -47,20 +47,20 @@ char *get_path(char *cmd)
 	struct stat st;
 
 	envp = getenv("PATH");
-	if (envp == NULL)
+	if (envp == NULL) /** PATH is not set */
 		return (NULL);
 	copenvp = strdup(envp);
 	token = strtok(copenvp, ":");
 	while (token)
 	{
-		sprintf(path, "%s/%s", token, cmd);
-		if (stat(path, &st) == 0)
+		sprintf(path, "%s/%s", token, cmd); /** Construct the full path */
+		if (stat(path, &st) == 0) /** Check if the path is valid */
 		{
 			res = strdup(path);
 			free(copenvp);
 			return (res);
 		}
-		token = strtok(NULL, ":");
+		token = strtok(NULL, ":"); /** Get the next token */
 	}
 	free(copenvp);
 	return (NULL);
