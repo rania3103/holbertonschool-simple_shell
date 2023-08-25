@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * tokenize - Splits the line input into tokens
  * @line: The line input
  *
  * Return: The array of tokens
 */
+
 char **tokenize(char *line)
 {
 	char **tokens = NULL;
