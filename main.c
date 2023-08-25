@@ -40,7 +40,7 @@ int main(void)
 		if (ex == -1)
 		{
 			perror("error in execution");
-			exit(EXIT_FAILURE);
+			exit(2);
 		}
 	}
 	free(line_input);
