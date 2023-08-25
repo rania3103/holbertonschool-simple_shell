@@ -32,9 +32,6 @@ char **tokenize_path(char *p)
 
 
 
-
-
-
 /**
  * get_path - Gets the path
  * @cmd: The command
@@ -71,8 +68,6 @@ char *get_path(char *cmd)
 
 
 
-
-
 /**
  * print_env - Prints the current environment
  *
@@ -88,3 +83,9 @@ void print_env(void)
 		enviroment++;
 	}
 }
+
+
+
+
+
+
