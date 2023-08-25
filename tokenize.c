@@ -20,8 +20,8 @@ char **tokenize(char *line)
 	while (token != NULL)
 	{
 		tokens[i] = strdup(token);
-        i++;
-        token = strtok(NULL, " \n\t");
+		i++;
+		token = strtok(NULL, " \n\t");
 	}
 	tokens[i] = NULL;
 	return (tokens);
