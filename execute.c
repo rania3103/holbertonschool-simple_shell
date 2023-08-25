@@ -37,11 +37,6 @@ int execute(char *line_input)
 		exit_stat = execve(path, args, environ);
 	}
 	else  /** Parent process */
-	else if (pid == 0)
-	{
-		exit_stat = execve(path, args, environ);
-	}
-	else
 	{
 		wait(&status);
 		if (WIFEXITED(status))
