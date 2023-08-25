@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * tokenize_path - tokenize PATH variable
- * @p: full path
- * Return: array of pointers to path tokens
+ * tokenize_path - Tokenizes PATH variable
+ * @p: The full path
+ *
+ * Return: Array of pointers to path tokens
 */
 char **tokenize_path(char *p)
 {
@@ -27,10 +28,12 @@ char **tokenize_path(char *p)
 	buffer[i] = NULL;
 	return (buffer);
 }
+
 /**
- * get_path - get path
- * @cmd:command
- * Return: path or NULL on error
+ * get_path - Gets the path
+ * @cmd: The command
+ *
+ * Return: The full path or NULL (on error)
 */
 char *get_path(char *cmd)
 {
@@ -60,7 +63,8 @@ char *get_path(char *cmd)
 }
 
 /**
- * print_env - print the enviroment
+ * print_env - Prints the current environment
+ *
 */
 void print_env(void)
 {
