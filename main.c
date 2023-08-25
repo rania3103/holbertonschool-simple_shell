@@ -38,11 +38,8 @@ int main(void)
 		}
 		ex = execute(line_input);
 		if (ex == -1)
-		{
 			perror("error in execution");
-			exit(2);
-		}
 	}
 	free(line_input);
-	return (0);
+	return (ex);
 }
