@@ -103,22 +103,22 @@ $
 ## [Functions we used](https://via.placeholder.com/10/00b48a?text=+) 📲
 
 ```
-- strcmp
-- execve
-- perror
-- free
-- wait
-- exit
-- fork
-- stat
-- printf
-- strtok
-- strdup
-- malloc
-- sprintf
-- getenv
-- getline
-- isatty
+   - exit
+   - execve
+   - fork
+   - free
+   - getenv
+   - getline
+   - isatty
+   - malloc
+   - perror
+   - printf
+   - sprintf
+   - stat
+   - strcmp
+   - strdup
+   - strtok
+   - wait
 ```
 
 ## [Conclusion](https://via.placeholder.com/10/00b48a?text=+) 💎
