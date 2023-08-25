@@ -44,7 +44,7 @@ int main(void)
 		ex = execute(line_input);
 		if (ex == -1)
 			perror("Execution Error");
+		free(line_input);
 	}
-	free(line_input);
 	return (ex);
 }

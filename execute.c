@@ -33,12 +33,17 @@ int execute(char *line_input)
 		return (-1);
 	}
 	else if (pid == 0)  /** Child process */
+	{
 		exit_stat = execve(path, args, environ);
+	}
 	else  /** Parent process */
+	else if (pid == 0)
+	{
+		exit_stat = execve(path, args, environ);
+	}
+	else
 	{
 		wait(&status);
-		free(path);
-		free(args);
 		if (WIFEXITED(status))
 			status = WEXITSTATUS(status); /** Get child process exit status */
 	}
