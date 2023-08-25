@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * tokenize - split line into tokens
- * @line: line
- * Return: pointer
+ * tokenize - Splits the line input into tokens
+ * @line: The line input
+ *
+ * Return: The array of tokens
 */
 char **tokenize(char *line)
 {
@@ -16,6 +17,7 @@ char **tokenize(char *line)
 		perror("error in memory allocation");
 		exit(EXIT_FAILURE);
 	}
+
 	token = strtok(line, " \n\t");
 	while (token != NULL)
 	{
@@ -24,5 +26,6 @@ char **tokenize(char *line)
 		token = strtok(NULL, " \n\t");
 	}
 	tokens[i] = NULL;
+
 	return (tokens);
 }
