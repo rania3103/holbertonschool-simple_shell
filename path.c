@@ -75,7 +75,7 @@ char *get_path(char *cmd)
 
 void print_env(void)
 {
-	char **enviroment = environ;
+	char **enviroment = environ; /** Pointer to environment variables */
 
 	while (*enviroment != NULL)
 	{
