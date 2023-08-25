@@ -93,11 +93,11 @@ $
 ## [Our files](https://via.placeholder.com/10/00b48a?text=+) 📁
 
 ```
-- main.h: header file
-- tokenize.c: tokenize input
-- execute.c: execute a command
-- path.c: functions related to path
-- AUTHORS: contributors to the project
+   - AUTHORS: contributors to the project
+   - execute.c: execute a command
+   - main.h: header file
+   - path.c: functions related to path
+   - tokenize.c: tokenize input
 ```
 
 ## [Functions we used](https://via.placeholder.com/10/00b48a?text=+) 📲
