@@ -6,7 +6,7 @@
 int main(void)
 {
 	char *line_input = NULL;
-	int ex, r;
+	int ex = 0, r;
 	size_t bufsize = 0;
 
 	while (1)
