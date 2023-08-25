@@ -17,7 +17,7 @@ int main(void)
 		if (isatty(STDIN_FILENO))
 			printf("simpleshell$ ");
 
-		signal(SIGINT, sig_handler);
+		signal(SIGINT, signal_handler);
 
 		r = getline(&line_input, &bufsize, stdin);
 		if (r == -1)
