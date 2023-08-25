@@ -9,11 +9,16 @@
 #include <string.h>
 
 extern char **environ;
+
 int main(void);
 int execute(char *line_input);
+
 char **tokenize(char *line);
 char **tokenize_path(char *p);
 char *get_path(char *cmd);
+
 void print_env(void);
 void free_tokens(char **tokens);
+
+
 #endif
