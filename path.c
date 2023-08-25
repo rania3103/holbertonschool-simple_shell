@@ -62,7 +62,6 @@ char *get_path(char *cmd)
 		token = strtok(NULL, ":"); /** Get the next token */
 	}
 	free(copenvp);
-	free(token);
 	return (NULL);
 }
 
