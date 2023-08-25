@@ -16,7 +16,7 @@ char **tokenize(char *line)
 	tokens = (char **) malloc(sizeof(char *) * 1024);
 	if (tokens == NULL)
 	{
-		perror("error in memory allocation");
+		perror("Error in memory allocation");
 		exit(EXIT_FAILURE);
 	}
 
