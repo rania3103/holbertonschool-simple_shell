@@ -73,7 +73,7 @@ simpleshell$
 ```bash
 SimpleShell$ ls
 AUTHORS            execute.c          main.h             path.c             tokenize.c
-README.md          main.c             man_1_simple_shell readline.c
+README.md          main.c             man_1_simple_shell 
 
 simpleshell$ env
 PATH=/usr/local/bin:/usr/bin:/bin
