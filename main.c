@@ -34,7 +34,7 @@ int main(void)
 		{
 			print_env();
 			free(line_input);
-			exit(EXIT_SUCCESS);
+			continue;
 		}
 		ex = execute(line_input);
 		if (ex == -1)

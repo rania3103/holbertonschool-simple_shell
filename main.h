@@ -15,5 +15,5 @@ char **tokenize(char *line);
 char **tokenize_path(char *p);
 char *get_path(char *cmd);
 void print_env(void);
-
+void free_tokens(char **tokens);
 #endif

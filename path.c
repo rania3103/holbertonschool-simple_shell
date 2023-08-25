@@ -55,7 +55,6 @@ char *get_path(char *cmd)
 		}
 		token = strtok(NULL, ":");
 	}
-	free(res);
 	free(copenvp);
 	return (NULL);
 }
@@ -73,7 +72,3 @@ void print_env(void)
 		enviroment++;
 	}
 }
-
-
-
-
