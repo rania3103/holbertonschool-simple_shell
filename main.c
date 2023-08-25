@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * main - Entry point
  *
  * Return: 0 (on success) or -1 (on error)
 */
+
 int main(void)
 {
 	char *line_input = NULL;
@@ -13,7 +15,7 @@ int main(void)
 	while (1)
 	{
 		if (isatty(STDIN_FILENO))
-			printf("simpleshell$");
+			printf("simpleshell$ ");
 
 		r = getline(&line_input, &bufsize, stdin);
 		if (r == -1)
@@ -26,6 +28,7 @@ int main(void)
 			}
 			break;
 		}
+
 		if (strcmp(line_input, "exit\n") == 0)
 		{
 			free(line_input);
@@ -37,9 +40,10 @@ int main(void)
 			free(line_input);
 			continue;
 		}
+
 		ex = execute(line_input);
 		if (ex == -1)
-			perror("error in execution");
+			perror("Execution Error");
 	}
 	free(line_input);
 	return (ex);
