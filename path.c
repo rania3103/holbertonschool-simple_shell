@@ -6,6 +6,7 @@
  *
  * Return: Array of pointers to path tokens
 */
+
 char **tokenize_path(char *p)
 {
 	char **buffer;
@@ -29,12 +30,18 @@ char **tokenize_path(char *p)
 	return (buffer);
 }
 
+
+
+
+
+
 /**
  * get_path - Gets the path
  * @cmd: The command
  *
  * Return: The full path or NULL (on error)
 */
+
 char *get_path(char *cmd)
 {
 	char *envp, *copenvp, *res = NULL;
@@ -62,10 +69,15 @@ char *get_path(char *cmd)
 	return (NULL);
 }
 
+
+
+
+
 /**
  * print_env - Prints the current environment
  *
 */
+
 void print_env(void)
 {
 	char **enviroment = environ;
