@@ -1,8 +1,9 @@
 #include "main.h"
 /**
- * execute - execute a command
- * @line_input: line
- * Return: 0 or a negative value
+ * execute - Executes a command
+ * @line_input: Line input from the user
+ *
+ * Return: exit_stat (0 on success or -1 on error)
 */
 int execute(char *line_input)
 {
