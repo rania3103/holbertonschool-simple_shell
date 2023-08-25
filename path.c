@@ -34,7 +34,7 @@ char **tokenize_path(char *p)
 */
 char *get_path(char *cmd)
 {
-	char *envp, *copenvp, *res = NULL;
+	char *envp, *copenvp;
 	char path[1024];
 	char *token;
 	struct stat st;
@@ -49,13 +49,13 @@ char *get_path(char *cmd)
 		sprintf(path, "%s/%s", token, cmd);
 		if (stat(path, &st) == 0)
 		{
-			res = strdup(path);
 			free(copenvp);
-			return (res);
+			return (strdup(path));
 		}
 		token = strtok(NULL, ":");
 	}
 	free(copenvp);
+	free(token);
 	return (NULL);
 }
 

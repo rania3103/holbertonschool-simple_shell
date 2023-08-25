@@ -39,7 +39,7 @@ int main(void)
 		ex = execute(line_input);
 		if (ex == -1)
 			perror("error in execution");
+		free(line_input);
 	}
-	free(line_input);
 	return (ex);
 }
